@@ -30,7 +30,7 @@ public class ConversorTest {
 	}
 	
 	@Test
-	public void aoAdicionarUmEstabelecimentoDeveMostraLoNaTabela() throws Exception {
+	public void abriConversor() throws Exception {
 		conversor.abrePaginaInicial();
 	}
 }
