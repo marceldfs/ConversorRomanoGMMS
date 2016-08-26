@@ -24,6 +24,6 @@ public class GestorNumero {
 			if (numeroRomano.getNumeroRomano() == numero)
 				return numeroRomano;
 		}
-		return null;
+		throw new IllegalArgumentException();
 	}
 }
