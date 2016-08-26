@@ -43,4 +43,11 @@ public class ConversorTest {
 		String numeroConverter ="IV";
 		assertEquals("4",conversor.converter(numeroConverter));
 	}
+	
+	@Test
+	public void converterMMDCCXIII()
+	{
+		String numeroConverter ="MMDCCXIII";
+		assertEquals("2713",conversor.converter(numeroConverter));
+	}
 }

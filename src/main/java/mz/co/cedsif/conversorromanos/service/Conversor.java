@@ -15,7 +15,9 @@ public class Conversor {
 		numerosRomanos.add(new NumeroRomano('v',5));
 		numerosRomanos.add(new NumeroRomano('x',10));
 		numerosRomanos.add(new NumeroRomano('l',50));
-		numerosRomanos.add(new NumeroRomano('l',100));
+		numerosRomanos.add(new NumeroRomano('c',100));
+		numerosRomanos.add(new NumeroRomano('d',500));
+		numerosRomanos.add(new NumeroRomano('m',1000));
 	}
 	
 	public String converter(String numeroConvertido)
