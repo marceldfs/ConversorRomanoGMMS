@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import mz.co.cedsif.conversorromanos.acceptance.page.ConversorPage;
 import mz.co.cedsif.conversorromanos.properties.Properties;
 
@@ -16,7 +16,8 @@ public class ConversorTest {
 
 	@BeforeClass
 	public static void abreBrowser() {
-		browser = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver","C:/Programming/chrome/chromedriver.exe");
+		browser = new ChromeDriver();
 	}
 	
 	@Before
