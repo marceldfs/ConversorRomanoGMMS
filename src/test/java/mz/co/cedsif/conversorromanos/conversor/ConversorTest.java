@@ -57,4 +57,11 @@ public class ConversorTest {
 		String numeroConverter ="U";
 		String resultado = conversor.converter(numeroConverter);
 	}
+	
+	@Test(expected=Exception.class)
+	public void converterIL()
+	{
+		String numeroConverter ="IL";
+		String resultado = conversor.converter(numeroConverter);
+	}
 }
