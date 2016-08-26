@@ -10,13 +10,13 @@ public class GestorNumero {
 
 	public GestorNumero() {
 		numerosRomanos = new ArrayList<>();
-		numerosRomanos.add(new NumeroRomano('i', 1, 1));
-		numerosRomanos.add(new NumeroRomano('v', 5, 2));
-		numerosRomanos.add(new NumeroRomano('x', 10, 3));
-		numerosRomanos.add(new NumeroRomano('l', 50, 4));
-		numerosRomanos.add(new NumeroRomano('c', 100, 5));
-		numerosRomanos.add(new NumeroRomano('d', 500, 6));
-		numerosRomanos.add(new NumeroRomano('m', 1000, 7));
+		numerosRomanos.add(new NumeroRomano('i', 1, 0));
+		numerosRomanos.add(new NumeroRomano('v', 5, 1));
+		numerosRomanos.add(new NumeroRomano('x', 10, 2));
+		numerosRomanos.add(new NumeroRomano('l', 50, 3));
+		numerosRomanos.add(new NumeroRomano('c', 100, 4));
+		numerosRomanos.add(new NumeroRomano('d', 500, 5));
+		numerosRomanos.add(new NumeroRomano('m', 1000, 6));
 	}
 
 	public NumeroRomano devolveRomano(char numero) {

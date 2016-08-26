@@ -23,6 +23,10 @@ public class Conversor {
 			resultado+=numeroActual.getNumeroDecimal();
 			if(numeroAnterior!=null && numeroActual.getNumeroDecimal()>numeroAnterior.getNumeroDecimal())
 			{
+				if(numeroActual.getPosicao()-numeroAnterior.getPosicao()>2)
+				{
+					throw new IllegalArgumentException();
+				}
 				resultado+=-2*numeroAnterior.getNumeroDecimal();
 			}
 			numeroAnterior=numeroActual;

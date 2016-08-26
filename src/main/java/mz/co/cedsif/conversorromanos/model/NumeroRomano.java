@@ -6,9 +6,10 @@ public class NumeroRomano {
 	private int posicao;
 	
 
-	public NumeroRomano(char numeroRomano, int numeroDecimal, int i) {
+	public NumeroRomano(char numeroRomano, int numeroDecimal, int posicao) {
 		this.numeroRomano = numeroRomano;
 		this.numeroDecimal = numeroDecimal;
+		this.posicao = posicao;
 	}
 
 	public char getNumeroRomano() {
