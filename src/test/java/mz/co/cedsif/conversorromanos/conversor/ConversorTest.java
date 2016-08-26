@@ -71,4 +71,11 @@ public class ConversorTest {
 		String numeroConverter ="VX";
 		String resultado = conversor.converter(numeroConverter);
 	}
+	
+	@Test(expected=Exception.class)
+	public void converterIIII()
+	{
+		String numeroConverter ="IIII";
+		String resultado = conversor.converter(numeroConverter);
+	}
 }
