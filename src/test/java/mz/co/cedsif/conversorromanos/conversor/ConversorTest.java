@@ -78,4 +78,11 @@ public class ConversorTest {
 		String numeroConverter ="IIII";
 		String resultado = conversor.converter(numeroConverter);
 	}
+	
+	@Test
+	public void converterMCCLXXVIII()
+	{
+		String numeroConverter ="MCCLXXVIII";
+		assertEquals("1278",conversor.converter(numeroConverter));
+	}
 }
