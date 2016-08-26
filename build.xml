@@ -1,4 +1,4 @@
-<project name="agiletickets" default="war" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="conversorromanos" default="war" xmlns:ivy="antlib:org.apache.ivy.ant">
 
 	<property file="build.properties" />
 
@@ -69,7 +69,7 @@
 			<batchtest fork="yes" todir="${output.dir}/test-results">
 				<fileset dir="${test.src.dir}">
 					<include name="**/*Test.java"/>
-					<exclude name="**/EstabelecimentoTest.java"/>
+					<exclude name="**/ConversorTest.java"/>
 				</fileset>
 			</batchtest>
 			<formatter type="brief" usefile="false" />
