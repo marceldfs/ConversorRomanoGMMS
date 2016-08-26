@@ -50,4 +50,11 @@ public class ConversorTest {
 		String numeroConverter ="MMDCCXIII";
 		assertEquals("2713",conversor.converter(numeroConverter));
 	}
+	
+	@Test(expected=Exception.class)
+	public void converterU()
+	{
+		String numeroConverter ="U";
+		String resultado = conversor.converter(numeroConverter);
+	}
 }
