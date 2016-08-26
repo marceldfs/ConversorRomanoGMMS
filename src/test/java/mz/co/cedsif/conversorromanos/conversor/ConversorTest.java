@@ -30,4 +30,11 @@ public class ConversorTest {
 		assertEquals("2",conversor.converter(numeroConverter));
 	}
 	
+	@Test
+	public void converterV()
+	{
+		String numeroConverter ="V";
+		assertEquals("5",conversor.converter(numeroConverter));
+	}
+	
 }
