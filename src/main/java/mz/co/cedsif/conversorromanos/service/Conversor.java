@@ -19,6 +19,13 @@ public class Conversor {
 		NumeroRomano numeroActual = null;
 		for (int i = 0; i < numeros.length; i++) {
 			numeroActual = gestor.devolveRomano(numeros[i]);
+			if (i >= 3) {
+				if (numeroActual.getNumeroRomano() == numeroUltimo.getNumeroRomano()
+						&& numeroUltimo.getNumeroRomano() == numeroPenultimo.getNumeroRomano()
+						&& numeroPenultimo.getNumeroRomano() == numeroAntePenultimo.getNumeroRomano()) {
+					throw new IllegalArgumentException();
+				}
+			}
 			resultado += numeroActual.getNumeroDecimal();
 			if (numeroUltimo != null && numeroActual.getNumeroDecimal() > numeroUltimo.getNumeroDecimal()) {
 				if (numeroUltimo.getPosicao() % 2 == 1 || numeroActual.getPosicao() - numeroUltimo.getPosicao() > 2) {
@@ -26,15 +33,14 @@ public class Conversor {
 				}
 				resultado += -2 * numeroUltimo.getNumeroDecimal();
 			}
-			if (i >= 3) {
-				if (numeroActual.getNumeroRomano() == numeroUltimo.getNumeroRomano()
-						&& numeroUltimo.getNumeroRomano() == numeroPenultimo.getNumeroRomano()
-						&& numeroPenultimo.getNumeroRomano() == numeroAntePenultimo.getNumeroRomano()) {
+			if (i >= 2) {
+				if(numeroActual.getNumeroDecimal()<=numeroPenultimo.getNumeroDecimal() && numeroUltimo.getNumeroDecimal()>numeroPenultimo.getNumeroDecimal())
+				{
 					throw new IllegalArgumentException();
 				}
 				numeroAntePenultimo = numeroPenultimo;
 			}
-			if (i >= 2) {
+			if (i >= 1) {
 				numeroPenultimo = numeroUltimo;
 			}
 			numeroUltimo = numeroActual;
