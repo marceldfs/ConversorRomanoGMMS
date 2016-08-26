@@ -22,4 +22,12 @@ public class ConversorTest {
 		String numeroConverter ="I";
 		assertEquals("1",conversor.converter(numeroConverter));
 	}
+	
+	@Test
+	public void converterII()
+	{
+		String numeroConverter ="II";
+		assertEquals("2",conversor.converter(numeroConverter));
+	}
+	
 }
