@@ -85,4 +85,11 @@ public class ConversorTest {
 		String numeroConverter ="MCCLXXVIII";
 		assertEquals("1278",conversor.converter(numeroConverter));
 	}
+
+	@Test(expected=Exception.class)
+	public void converterIXIX()
+	{
+		String numeroConverter ="IXIX";
+		String resultado = conversor.converter(numeroConverter);
+	}
 }
