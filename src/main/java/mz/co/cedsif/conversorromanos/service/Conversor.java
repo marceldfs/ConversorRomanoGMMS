@@ -22,9 +22,17 @@ public class Conversor {
 	{
 		char[]numeros = numeroConvertido.toLowerCase().toCharArray();
 		int resultado=0;
+		NumeroRomano numeroAnterior = null;
+		NumeroRomano numeroActual = null;
 		for(int i=0;i<numeros.length;i++)
 		{
-			resultado+=devolveRomano(numeros[i]).getNumeroDecimal();
+			numeroActual = devolveRomano(numeros[i]);
+			resultado+=numeroActual.getNumeroDecimal();
+			if(numeroAnterior!=null && numeroActual.getNumeroDecimal()>numeroAnterior.getNumeroDecimal())
+			{
+				resultado+=-2*numeroAnterior.getNumeroDecimal();
+			}
+			numeroAnterior=numeroActual;
 		}
 		return resultado+"";
 	}
