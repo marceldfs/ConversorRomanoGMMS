@@ -4,6 +4,12 @@ public class Conversor {
 	
 	public String converter(String numeroConvertido)
 	{
-		return "1";
+		char[]numeros = numeroConvertido.toCharArray();
+		int resultado=0;
+		for(int i=0;i<numeros.length;i++)
+		{
+			resultado++;
+		}
+		return resultado+"";
 	}
 }
