@@ -1,5 +1,6 @@
 package mz.co.cedsif.conversorromanos.acceptance.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import mz.co.cedsif.conversorromanos.properties.Properties;
@@ -14,6 +15,10 @@ public class ConversorPage {
 
 	public void abrePaginaInicial() {
 		driver.get(BASE_URL + "/ConversorRomanoGMMS");
+	}
+
+	public void abreConversor() {
+		driver.findElement(By.linkText("Conversor")).click();	
 	}
 
 }

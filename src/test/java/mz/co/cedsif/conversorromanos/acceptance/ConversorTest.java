@@ -34,4 +34,10 @@ public class ConversorTest {
 	public void abriConversor() throws Exception {
 		conversor.abrePaginaInicial();
 	}
+	
+	@Test
+	public void tentaConverterI() throws Exception {
+		conversor.abrePaginaInicial();
+		conversor.abreConversor();
+	}
 }
