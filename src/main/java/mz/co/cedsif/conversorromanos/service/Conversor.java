@@ -4,6 +4,6 @@ public class Conversor {
 	
 	public String converter(String numeroConvertido)
 	{
-		return null;
+		return "1";
 	}
 }
