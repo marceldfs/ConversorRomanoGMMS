@@ -4,7 +4,11 @@ import mz.co.cedsif.conversorromanos.model.NumeroRomano;
 
 public class Conversor {
 
-	GestorNumero gestor;
+	private GestorNumero gestor;
+	private NumeroRomano numeroUltimo = null;
+	private NumeroRomano numeroPenultimo = null;
+	private NumeroRomano numeroAntePenultimo = null;
+	private NumeroRomano numeroActual = null;
 
 	public Conversor() {
 		gestor = new GestorNumero();
@@ -13,10 +17,12 @@ public class Conversor {
 	public String converter(String numeroConvertido) {
 		char[] numeros = numeroConvertido.toLowerCase().toCharArray();
 		int resultado = 0;
-		NumeroRomano numeroUltimo = null;
-		NumeroRomano numeroPenultimo = null;
-		NumeroRomano numeroAntePenultimo = null;
-		NumeroRomano numeroActual = null;
+		
+		numeroActual = null;
+		numeroUltimo = null;
+		numeroPenultimo = null;
+		numeroAntePenultimo = null;
+		
 		for (int i = 0; i < numeros.length; i++) {
 			numeroActual = gestor.devolveRomano(numeros[i]);
 			if (i >= 3) {
